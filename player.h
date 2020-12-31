@@ -64,7 +64,7 @@ public:
   u_int8_t field_0x190; // set to 1 when the blooper state is applied
   // unknown 0x191
   int16_t crushTimer; // 0x192, timer for being crushed by Thwomp & Mega
-  int16_t MegaTimer; // 0x194, timer for Mega mushroom
+  int16_t megaTimer; // 0x194, timer for Mega mushroom
   // unknown 0x196 - 0x248
   uint32_t drivingDirection; // 0: forwards, 1: braking, 2: waiting on the backwards counter, 3: backwards
   uint16_t backwardsAllowCounter;
