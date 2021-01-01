@@ -61,7 +61,7 @@ public:
   int16_t starTimer; // 0x18A, timer for Star
   int16_t shockTimer; // 0x18C, used when shocked by KC Zappers, TC, or Shock
   int16_t blooperCharacterInk; // 0x18E, timer for ink on player
-  u_int8_t field_0x190; // set to 1 when the blooper state is applied
+  uint8_t field_0x190; // set to 1 when the blooper state is applied
   // unknown 0x191
   int16_t crushTimer; // 0x192, timer for being crushed by Thwomp & Mega
   int16_t megaTimer; // 0x194, timer for Mega mushroom
@@ -77,12 +77,17 @@ class PlayerSub10Bike {
 public:
   PlayerSub10Bike(); // 808b5ee8 PAL
   updateRotationVector(); // 80587d68 PAL
+  updateWheelie(); // 80587d64 PAL
   updateMtCharge(); // 80588888 PAL
 
   // vtable 80587b30 PAL
-  // unknown 0x294 - 0x2AB
-  u_int8_t field_0x2AC; // could be a wheelie flag (0 = not in wheelie, 1 = in wheelie), set to 1 when starting wheelie and 0 when ending wheelie?
-  // unknown 0x2AD - 0x2C3
+  // unknown 0x294 - 0x2a7
+  uint32_t wheelieTimer;
+  uint8_t field_0x2AC; // could be a wheelie flag (0 = not in wheelie, 1 = in wheelie), set to 1 when starting wheelie and 0 when ending wheelie?
+  // unknown 0x2ad - 0x2B3
+  uint16_t wheelietimer2; // from what i know the same as wheelieTimer, but stored as a ushort
+  uint16_t wheelieCooldown;
+  // unknown 0x2b8 - 0x2c3
 }; // Total size 0x2c4
 
 class PlayerSub {
