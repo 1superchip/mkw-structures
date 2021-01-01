@@ -48,9 +48,13 @@ public:
   int16_t trickBoost;
   // unknown uint16_t 0x116, 0x118
   // unknown 0x11a - 0x11b
-  // unknown float 0x11c
+  float boostMultiplier; // this gets multiplied with nextspeed which will be the next speed
   float boostAcceleration;
-  // unknown 0x124 - 0x157
+  // unknown 0x124 - 0x147
+  int16_t zipperBoost; // boost that's mostly used on ramps
+  // unknown uint16_t 0x14a
+  uint16_t ssmtCharge;
+  // unknown 0x14e - 0x157
   float realTurn;
   float weightedTurn;
   // unknown 0x160 - 0x163
